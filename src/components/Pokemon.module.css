@@ -6,7 +6,7 @@
   border: 1px solid #ff6363;
   background-color: #ff63633f;
   margin: 1em;
-  min-width: 230px;
+  min-width: 250px;
   min-height: 245px;
   text-transform: capitalize;
 }
@@ -17,9 +17,12 @@
   width: 150px;
   height: 150px;
   margin-top: 5px;
+  filter: 
+  drop-shadow(0px 0px 2px rgb(255, 255, 255))
+  drop-shadow(0px 0px 2px rgb(255, 255, 255));
 }
 .typeIcon {
-    width: 50px!important;
+    width: 100px!important;
     height: 25px!important;
     margin-top: 5px!important;
 }
@@ -27,4 +30,5 @@
   display: flex;
   gap: 0.5em;
   margin-top: 0.5em;
+  margin-bottom: 0.8em;
 }

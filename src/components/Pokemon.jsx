@@ -8,15 +8,15 @@ function Pokemon ({ pokemon, typeOne, typeSecond, numberPkdx }) {
           <>
             <p>Nombre: {pokemon.name}</p>
             <p>Nº Pokedex: {numberPkdx}</p>
+              <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             <div className={styles.pokemonTypes}>
             {typeOne && (
-              <img className={styles.typeIcon} src={typeOne.sprites["generation-vi"]["x-y"].name_icon} alt={typeOne.name} />
+              <img className={styles.typeIcon} src={typeOne.sprites["generation-ix"]["scarlet-violet"].name_icon} alt={typeOne.name} />
             )}
             {typeSecond && (
-              <img className={styles.typeIcon} src={typeSecond.sprites["generation-vi"]["x-y"].name_icon} alt={typeSecond.name} />
+              <img className={styles.typeIcon} src={typeSecond.sprites["generation-ix"]["scarlet-violet"].name_icon} alt={typeSecond.name} />
             )}
             </div>
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
           </>
         )}
       </div>
