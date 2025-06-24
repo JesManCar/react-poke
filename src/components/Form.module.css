@@ -1,0 +1,22 @@
+.pokemonForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.pokemonForm input {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.pokemonButton{
+  background-color: #ff6363;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.5em 0.5em 0 0;
+}

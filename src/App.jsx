@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Form from './components/Form';
+import Pokemon from './components/Pokemon';
 
 function App () {
 
@@ -85,31 +87,8 @@ function App () {
   return (
     <>
       <h1>React Poke</h1>
-      <form className="pokemon-form">
-        <label htmlFor="pokemon">Buscar Pokémon:</label>
-        <input type="text" id="pokemon" name="pokemon" placeholder="Ingrese el nombre del Pokémon" onChange={handleChange}/>
-      </form>
-
-      <button className="pokemon-button" onClick={prevPokemon}>Previo</button>
-      <button className="pokemon-button" onClick={nextPokemon}>Siguiente</button>
-
-      <div className="pokemon-info">
-        {pokemon!=null && (
-          <>
-            <p>Nombre: {pokemon.name}</p>
-            <p>Nº Pokedex: {numberPkdx}</p>
-            <div className="pokemon-types">
-            {typeOne && (
-              <img className="type-icon" src={typeOne.sprites["generation-vi"]["x-y"].name_icon} alt={typeOne.name} />
-            )}
-            {typeSecond && (
-              <img className="type-icon" src={typeSecond.sprites["generation-vi"]["x-y"].name_icon} alt={typeSecond.name} />
-            )}
-            </div>
-            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-          </>
-        )}
-      </div>
+      <Form handleChange={handleChange} prevPokemon={prevPokemon} nextPokemon={nextPokemon} />
+      <Pokemon pokemon={pokemon} typeOne={typeOne} typeSecond={typeSecond} numberPkdx={numberPkdx} />
     </>
   )
   }
